@@ -1,0 +1,551 @@
+@charset "UTF-8";
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Topbar
+02: Navbar
+03: Offcanvas
+04: Banner Section 
+05: Search Modal 
+06: Button hover style
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Reset css Style
+    1.1: mixins
+    1.2: color
+    1.3: variable
+==================================================*/
+/*================================================
+01: Reset css Style
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All mixin css Style
+  1.1: transition
+  1.2: background-image
+  1.3: border-radius
+  1.4: text
+  1.5: transform
+  1.6: transformX
+  1.7: transformY
+  1.8: scale
+  1.9: rotate
+02: Responsive Screen
+  2.1: sm
+  2.2: md
+  2.3: lg
+  2.4: xl
+  2.5: xl2
+  2.6: xl3
+  2.7: xl4
+
+==================================================*/
+/*================================================
+// 01: All mixin css Style
+==================================================*/
+/*================================================
+//  02: Responsive Screen
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All Color Variable css Style
+
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Font-Family css variables
+02: Others css variables
+
+==================================================*/
+.topbar {
+  background-color: #d90a2c;
+}
+@media (max-width: 992px) {
+  .topbar .col-12 div {
+    flex-wrap: wrap;
+  }
+}
+.topbar .col-12 div a {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  text-decoration: underline;
+  order: 1;
+}
+@media (max-width: 992px) {
+  .topbar .col-12 div a {
+    flex: 0 0 auto;
+    order: 2;
+  }
+}
+@media (max-width: 576px) {
+  .topbar .col-12 div a {
+    flex: 1 1 100%;
+    text-align: center;
+    order: 2;
+  }
+}
+.topbar .col-12 div p {
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  order: 2;
+}
+@media (max-width: 992px) {
+  .topbar .col-12 div p {
+    text-align: center;
+    flex: 0 0 100%;
+    order: 1;
+  }
+}
+@media (max-width: 576px) {
+  .topbar .col-12 div p {
+    text-align: center;
+    flex: 0 0 100%;
+  }
+}
+.topbar .col-12 div div {
+  order: 3;
+}
+@media (max-width: 768px) {
+  .topbar .col-12 div div {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    order: 2;
+  }
+}
+@media (max-width: 576px) {
+  .topbar .col-12 div div {
+    flex: 1 1 50%;
+    justify-content: center;
+    order: 3;
+  }
+}
+.topbar .col-12 div div .dropdown {
+  flex: 0 0 auto;
+}
+.topbar .col-12 div div .dropdown .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.topbar .col-12 div div .dropdown .btn::after {
+  border: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f078";
+}
+.topbar .col-12 div div .dropdown .btn .flag-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #fff;
+}
+.topbar .col-12 div div .dropdown .btn span {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+.topbar .col-12 div div .dropdown .dropdown-menu {
+  background-color: #fff;
+  padding: 0;
+}
+.topbar .col-12 div div .dropdown .dropdown-menu li .dropdown-item {
+  text-decoration: none;
+  color: #d90a2c;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+.topbar .col-12 div div .dropdown .dropdown-menu li .dropdown-item.active {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: #d90a2c;
+}
+.topbar .col-12 div div .dropdown .dropdown-menu li .dropdown-item:hover {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: #d90a2c;
+}
+.topbar .col-12 div div .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 576px) {
+  .topbar .col-12 div div .social-icon {
+    gap: 11px;
+  }
+}
+
+.navbar {
+  z-index: 999;
+  padding: 0;
+  padding-top: 30px;
+}
+.navbar .navbar-brand {
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-brand img {
+    max-width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .navbar-toggler {
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 18px;
+  }
+  .navbar .navbar-toggler .toggle-btn {
+    border: 1px solid #d90a2c;
+    box-shadow: none;
+    outline: 0px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+.navbar .navbar-nav {
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 1200px) {
+  .navbar .navbar-nav {
+    gap: 20px;
+  }
+}
+.navbar .navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0;
+}
+@media (max-width: 1200px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+}
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  left: 0;
+  background-color: #111;
+  overflow: hidden;
+}
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu a {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  display: block;
+  text-align: left;
+  padding: 6px 10px;
+}
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu a:hover, .navbar .navbar-nav .nav-item.dropdown .dropdown-menu a.active {
+  background-color: #d90a2c;
+}
+.navbar .navbar-nav .nav-item.dropdown .nav-link {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+.navbar .navbar-nav .nav-item.dropdown .nav-link::after {
+  border: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f078";
+}
+.navbar .button:hover svg path {
+  fill: #d90a2c;
+}
+@media (max-width: 1200px) {
+  .navbar .button {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+.navbar.header--sticky {
+  padding: 20px 0;
+}
+
+.offcanvas {
+  background-color: #001d21;
+}
+.offcanvas .navbar-brand {
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .offcanvas .navbar-brand img {
+    max-width: 60%;
+  }
+}
+.offcanvas .offcanvas-close {
+  color: #d90a2c;
+}
+.offcanvas .navbar-nav {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.offcanvas .navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+}
+.offcanvas .navbar-nav .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0;
+}
+@media (max-width: 1200px) {
+  .offcanvas .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+}
+.offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  left: 0;
+  background-color: #d90a2c;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu a {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  display: block;
+  text-align: left;
+  padding: 0 10px;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu a:hover, .offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu a.active {
+  background-color: #d90a2c;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .nav-link {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .nav-link::after {
+  border: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f078";
+}
+@media (max-width: 1200px) {
+  .offcanvas .button {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+}
+@media (max-width: 992px) {
+  .offcanvas .button {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .offcanvas .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.banner-section {
+  max-width: 911px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 0;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .banner-section {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 576px) {
+  .banner-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+}
+.banner-section .subject {
+  background: #fff;
+  max-width: 306px;
+  margin: 0 auto;
+  padding: 14px 0;
+  color: #d90a2c;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 40px;
+}
+@media (max-width: 576px) {
+  .banner-section .subject {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+.banner-section .heading {
+  color: #fff;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 82px;
+  margin-bottom: 47px;
+}
+@media (max-width: 768px) {
+  .banner-section .heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .banner-section .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.banner-section .description {
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 35px;
+  max-width: 517px;
+  margin: 0 auto 50px;
+}
+.banner-section .description a {
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 35px;
+}
+@media (max-width: 576px) {
+  .banner-section .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .banner-section .button {
+    font-size: 14px;
+  }
+}
+
+.search-modal .modal-title {
+  color: #1d2229;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+.search-modal .form-control {
+  box-shadow: none;
+  border-color: #d90a2c;
+  color: #1d2229;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+.search-modal .btn {
+  background-color: #d90a2c;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button::before, .button::after {
+  border-color: #d90a2c;
+}
+.button:hover {
+  background-color: transparent;
+  color: #d90a2c;
+}/*# sourceMappingURL=nav-1.css.map */

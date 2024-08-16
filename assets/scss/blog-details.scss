@@ -1,0 +1,764 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: banner start
+02: service-details
+==================================================*/
+
+@import "main";
+
+// 01: banner start
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: service-details
+.service-details {
+  padding: 140px 0;
+  position: relative;
+  @include lg {
+    padding: 80px 0;
+  }
+  @include md {
+    padding: 40px 0;
+  }
+  .animated-circle {
+    &.right {
+      top: -3%;
+      right: -10%;
+      z-index: -1;
+    }
+    &.left {
+      top: 16%;
+      left: -9%;
+      z-index: -1;
+    }
+  }
+  .animated-circle-1 {
+    &.right {
+      top: 27%;
+      right: -13%;
+    }
+    &.left {
+      top: 38%;
+      left: -13%;
+      z-index: -1;
+    }
+  }
+  .animated-circle-2 {
+    &.right {
+      bottom: 30%;
+      right: -13%;
+    }
+    &.left {
+      bottom: 11%;
+      left: -13%;
+      z-index: -1;
+    }
+  }
+  .left-bar {
+    .comment {
+      padding: 40px 31px;
+      background-color: $right-side-bar;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      .icon {
+        margin-bottom: 15px;
+      }
+      .description {
+        @include text($primary-text, $nunito, 400, 16px, 26px);
+        margin-bottom: 40px;
+        @include md {
+          font-size: 14px;
+        }
+      }
+      .title {
+        @include text($primary, $nunito, 700, 24px, 34px);
+        padding-left: 54px;
+        position: relative;
+        margin-bottom: 0;
+        @include md {
+          font-size: 16px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          @include transformY(-50%);
+          width: 40px;
+          height: 2px;
+          background-color: $primary;
+        }
+      }
+    }
+    .service-1 {
+      margin-bottom: 40px;
+      .img {
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 30px;
+        }
+        .play-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(-50%, -50%);
+          @include md {
+            max-width: 80px;
+          }
+        }
+      }
+      .banner-slider-blog {
+        position: relative;
+        .prev {
+          position: absolute;
+          top: 50%;
+          left: 1%;
+          cursor: pointer;
+          @include transformY(-50%);
+          &:hover {
+            @include transition(all, linear, 0.3s);
+            svg {
+              .hover-effect {
+                fill: $tertiary;
+              }
+              path {
+                fill: $primary-text;
+              }
+            }
+          }
+        }
+        .next {
+          position: absolute;
+          top: 50%;
+          right: 1%;
+          cursor: pointer;
+          @include transformY(-50%);
+          &:hover {
+            @include transition(all, linear, 0.3s);
+            svg {
+              .hover-effect {
+                fill: $tertiary;
+              }
+              path {
+                fill: $primary-text;
+              }
+            }
+          }
+        }
+      }
+      .publish-by-date {
+        @include text($primary-text, $nunito, 400, 17px, 26px);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 28px;
+        @include md {
+          font-size: 14px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 6px;
+        }
+      }
+      h2 {
+        @include text($primary-text, $marcellus, 400, 30px, 45px);
+        margin-bottom: 20px;
+        @include md {
+          font-size: 18px;
+          line-height: 25px;
+        }
+      }
+      p {
+        @include text($primary-text, $jost, 400, 16px, 26px);
+        margin-bottom: 47px;
+        @include md {
+          font-size: 14px;
+        }
+      }
+      .button {
+        @include md {
+          font-size: 14px;
+          line-height: 40px;
+          padding: 0 30px;
+        }
+      }
+    }
+    .service-2 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 34px;
+      margin-bottom: 42px;
+      @include md {
+        flex-direction: column;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 328px;
+      }
+      .content {
+        h1 {
+          @include text($primary-text, $marcellus, 400, 24px, 26px);
+          margin-bottom: 26px;
+        }
+        ul {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+          gap: 15px;
+          li {
+            @include text($primary-text, $nunito, 700, 18px, 26px);
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            @include md {
+              font-size: 14px;
+            }
+            svg {
+              margin-right: 10px;
+            }
+            &:hover {
+              color: $primary;
+              svg {
+                path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .service-3 {
+      overflow: hidden;
+
+      .img-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+        margin-bottom: 30px;
+        @include md {
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+        img {
+          flex: 1 1 auto;
+        }
+      }
+      h2 {
+        @include text($primary-text, $marcellus, 400, 30px, 32px);
+        margin-bottom: 20px;
+        @include md {
+          font-size: 18px;
+        }
+      }
+      p {
+        @include text($primary-text, $jost, 400, 16px, 26px);
+        margin-bottom: 40px;
+        @include md {
+          font-size: 14px;
+        }
+      }
+    }
+    .publisher-info {
+      border-top: 1px solid #ccff0010;
+      border-bottom: 1px solid #ccff0010;
+      padding: 34px 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      h2 {
+        @include text($primary-text, $marcellus, 400, 30px, 37px);
+        margin-bottom: 20px;
+        @include md {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+      }
+      p {
+        @include text($primary-text, $nunito, 400, 16px, 28px);
+        margin-bottom: 42px;
+        @include md {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+      }
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        a {
+          width: 50px;
+          height: 50px;
+          background-color: #141414;
+          display: inline-block;
+          text-align: center;
+          font-size: 20px;
+          line-height: 50px;
+          @include border-radius(50%);
+
+          i {
+            color: $primary;
+          }
+          &:hover {
+            background-color: $primary;
+            i {
+              color: $primary-text;
+            }
+          }
+        }
+      }
+    }
+    .next-prev-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid #ccff0010;
+      padding: 40px 0;
+      .next,
+      .prev {
+        flex: 1 1 100%;
+        cursor: pointer;
+      }
+      .publisher-info {
+        padding: 37px 27px;
+        border-top: 0;
+        border-bottom: 0;
+        background-color: #141414;
+        @include md {
+          padding: 10px 10px;
+        }
+        .row {
+          align-items: center;
+          img {
+            width: 120px;
+            @include border-radius(8px);
+            @include md {
+              display: none;
+            }
+          }
+          h2 {
+            @include text($primary, $poppins, 300, 16px, 24px);
+            margin-bottom: 10px;
+            @include md {
+              margin-bottom: 0;
+              text-align: center;
+            }
+          }
+          p {
+            @include text($primary-text, $nunito, 700, 18px, 28px);
+            margin-bottom: 0;
+            @include md {
+              display: none;
+            }
+          }
+        }
+      }
+      .next {
+        .publisher-info {
+          text-align: right;
+          .row {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+    .user-comment {
+      .comment-title {
+        margin-top: 43px;
+        @include text($primary-text, $marcellus, 400, 30px, 45px);
+        margin-bottom: 38px;
+        padding-bottom: 10px;
+        position: relative;
+        @include md {
+          font-size: 18px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 58px;
+          height: 2px;
+          background-color: $primary;
+        }
+      }
+      .commenting-show-area {
+        .user-comment-item {
+          border-bottom: 1px solid #ccff0015;
+          margin-bottom: 30px;
+          position: relative;
+          padding-bottom: 31px;
+          &:last-child {
+            border-bottom: 0px solid #ccff0015;
+          }
+          .user-comment-replay {
+            padding-left: 40px;
+            @include md {
+              padding-left: 20px;
+            }
+          }
+          img {
+            width: 120px;
+            @include border-radius(8px);
+            @include md {
+              width: 80px;
+            }
+          }
+          .btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 1px solid #d90a2c;
+            @include text($primary, $poppins, 500, 15px, 40px);
+            padding: 0 24px;
+            @include md {
+              font-size: 14px;
+            }
+            &:hover {
+              background-color: #d90a2c;
+              color: #111;
+            }
+          }
+          p {
+            @include text($primary-text, $marcellus, 400, 20px, 28px);
+            margin-bottom: 20px;
+            @include md {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .comment-box {
+        form {
+          input,
+          textarea {
+            background-color: transparent;
+            border-color: #ffffff30;
+            padding: 15px 17px;
+            @include text(#fff, $poppins, 400, 16px, 26px);
+            outline: none;
+            box-shadow: none;
+            @include md {
+              font-size: 14px;
+            }
+            &::placeholder {
+              @include text(#b1b1b1, $poppins, 400, 16px, 26px);
+              @include md {
+                font-size: 14px;
+              }
+            }
+          }
+          .button {
+            @include md {
+              font-size: 14px;
+              line-height: 40px;
+              padding: 0 30px;
+            }
+            &:hover {
+              border-color: $primary;
+              color: $primary;
+              background-color: transparent;
+              svg {
+                path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .right-bar {
+    form {
+      background-color: $right-side-bar;
+      padding: 22px 29px;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      input {
+        border: 1px solid $primary;
+        width: 100%;
+        @include text($primary-text, $old, 400, 16px, 26px);
+        background: transparent;
+        padding: 13px 19px;
+        @include border-radius(4px);
+        @include md {
+          padding: 10px 16px;
+        }
+        &::placeholder {
+          @include text($primary, $old, 700, 16px, 26px);
+        }
+      }
+      button {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include transformY(-50%);
+        padding: 15px 20px;
+        background-color: $primary;
+        @include border-radius(0px 4px 4px 0px);
+        @include md {
+          padding: 11px 16px;
+        }
+      }
+    }
+    .main-service {
+      padding: 40px 31px;
+      background-color: $right-side-bar;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      h2 {
+        @include text($primary, $marcellus, 400, 24px, 26px);
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 44px;
+        @include md {
+          font-size: 18px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 58px;
+          height: 2px;
+          background-color: $primary;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 31px;
+        li {
+          width: 100%;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ffffff10;
+            @include text($primary-text, $nunito, 700, 17px, 26px);
+            @include transition(all, linear, 0.3s);
+            &:hover {
+              border-bottom: 1px solid $primary;
+              @include text($primary, $nunito, 700, 17px, 26px);
+              svg {
+                path {
+                  fill: $primary;
+                  @include transition(all, linear, 0.3s);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .banner-adv {
+      margin-bottom: 25px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .popular-post {
+      padding: 40px 31px;
+      background-color: $right-side-bar;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      h2 {
+        @include text($primary, $marcellus, 400, 24px, 26px);
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 44px;
+        @include md {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 58px;
+          height: 2px;
+          background-color: $primary;
+        }
+      }
+      .popular-post-part {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 24px;
+        .popular-post-item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 20px;
+          .img {
+            max-width: 110px;
+            max-height: 110px;
+            min-width: 110px;
+            min-height: 110px;
+            overflow: hidden;
+            @include border-radius(50%);
+            img {
+              min-width: 110px;
+              min-height: 110px;
+              @include border-radius(50%);
+              width: 100%;
+              height: 100%;
+              @include transition(all, 0.4s, ease);
+              @include md {
+                min-width: 80px;
+                min-height: 80px;
+              }
+            }
+          }
+          .content {
+            .date {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 28px;
+              margin-bottom: 16px;
+              span {
+                @include text($primary-text, $nunito, 400, 16px, 20px);
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 7px;
+                @include md {
+                  font-size: 14px;
+                }
+              }
+            }
+            p {
+              @include text($primary-text, $marcellus, 400, 18px, 28px);
+              @include md {
+                font-size: 14px;
+              }
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            .img {
+              img {
+                transform: translateY(-3px) scale(1.09);
+                -webkit-transform: translateY(-3px) scale(1.09);
+                -moz-transform: translateY(-3px) scale(1.09);
+                -ms-transform: translateY(-3px) scale(1.09);
+                -o-transform: translateY(-3px) scale(1.09);
+              }
+            }
+            .content {
+              p {
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+    .popular-tags {
+      padding: 40px 31px;
+      background-color: $right-side-bar;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      h2 {
+        @include text($primary, $marcellus, 400, 24px, 26px);
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 44px;
+        @include md {
+          font-size: 18px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 58px;
+          height: 2px;
+          background-color: $primary;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 9px;
+        li {
+          flex: 0 0 auto;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ffffff10;
+            @include text($primary-text, $nunito, 700, 17px, 45px);
+            @include transition(all, linear, 0.3s);
+            padding: 0 20px;
+            @include border-radius(3px);
+            @include md {
+              padding: 0 10px;
+              font-size: 14px;
+            }
+            &:hover {
+              border-color: $primary;
+              color: $primary-text;
+              background-color: $primary;
+              transform: translateY(-3px) scale(1.09);
+              -webkit-transform: translateY(-3px) scale(1.09);
+              -moz-transform: translateY(-3px) scale(1.09);
+              -ms-transform: translateY(-3px) scale(1.09);
+              -o-transform: translateY(-3px) scale(1.09);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,436 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Topbar
+02: Navbar
+03: Offcanvas
+04: Search Modal 
+==================================================*/
+
+@import "main";
+
+// 01: Topbar
+.topbar {
+  background-color: $top-navbar;
+  @include lg {
+    padding: 10px 0;
+  }
+  p {
+    @include text($primary-text, $jost, 500, 16px, 50px);
+  }
+  div {
+    gap: 30px;
+    @include lg {
+      flex-wrap: wrap;
+      justify-content: space-between !important;
+      text-align: center;
+      gap: 10px;
+    }
+    @include sm {
+      justify-content: center !important;
+    }
+    p {
+      @include lg {
+        font-size: 14px;
+        line-height: 23px;
+      }
+    }
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 29px;
+    }
+  }
+}
+
+// 02: Navbar
+.navbar {
+  .navbar-brand {
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    img {
+      @include sm {
+        max-width: 70%;
+      }
+    }
+  }
+  @include lg {
+    .navbar-toggler {
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      gap: 18px;
+      .toggle-btn {
+        border: 1px solid $tertiary;
+        box-shadow: none;
+        outline: 0px;
+        color: $primary-text;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .col-12 {
+    &:first-child {
+      background-color: $tertiary;
+      .logo {
+        img {
+          @include lg {
+            max-width: 60%;
+          }
+        }
+        @include lg {
+          display: flex;
+          justify-content: space-between;
+          margin: 10px 0;
+        }
+      }
+    }
+    &:last-child {
+      .navbar-collapse {
+        background-color: $primary-text;
+        position: absolute;
+        bottom: -4rem;
+        left: 50%;
+        z-index: 1;
+        max-width: calc(100% - 5%);
+        width: 100%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        @include xl {
+          bottom: -3rem;
+        }
+        .logo {
+          display: none;
+        }
+      }
+    }
+    .header--sticky {
+      .logo {
+        display: none;
+        @include lg {
+          display: flex;
+          justify-content: space-between;
+          margin: 10px 0;
+          flex: 0 0 100%;
+        }
+      }
+      &.sticky {
+        background-color: $tertiary;
+        .container {
+          max-width: 100%;
+          .custom-row {
+            display: flex;
+            align-items: center;
+            .logo {
+              display: flex;
+            }
+            .navbar-collapse {
+              background-color: $tertiary;
+              position: unset;
+              transform: translateX(0);
+              -webkit-transform: translateX(0);
+              -moz-transform: translateX(0);
+              -ms-transform: translateX(0);
+              -o-transform: translateX(0);
+              max-width: 100%;
+              .logo {
+                display: block;
+              }
+              .navbar-nav {
+                margin: 0 auto;
+                @include xl3 {
+                  gap: 10px;
+                }
+                .nav-item {
+                  .nav-link {
+                    color: $primary-text;
+                  }
+                }
+              }
+              .right-nav {
+                .search-btn {
+                  svg {
+                    path {
+                      fill: #fff;
+                    }
+                  }
+                }
+                .button {
+                  background-color: #fff;
+                  color: $tertiary;
+                  @include xl2 {
+                    padding: 0 22px;
+                  }
+                  svg {
+                    path {
+                      fill: $tertiary;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-address {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 75px;
+    height: 122px;
+    @include xl {
+      gap: 20px;
+      height: 100px;
+    }
+    @include lg {
+      display: none;
+    }
+    .location {
+      border-right: 1px solid #dbdbdb65;
+      padding-right: 80px;
+      p {
+        @include text($primary-text, $jost, 500, 18px, 24px);
+      }
+      a {
+        @include text($primary-text, $jost, 400, 16px, 24px);
+      }
+    }
+    .email {
+      border-right: 1px solid #dbdbdb65;
+      padding-right: 80px;
+      p {
+        @include text($primary-text, $jost, 500, 18px, 24px);
+      }
+      a {
+        @include text($primary-text, $jost, 400, 16px, 24px);
+      }
+    }
+    .call-us {
+      p {
+        @include text($primary-text, $jost, 500, 18px, 24px);
+      }
+      a {
+        @include text($primary-text, $jost, 400, 16px, 24px);
+      }
+    }
+  }
+  .navbar-nav {
+    align-items: center;
+    gap: 60px;
+    padding: 0 42px;
+    @include xl2 {
+      gap: 30px;
+    }
+    @include xl {
+      gap: 10px;
+    }
+    .nav-item {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+      .nav-link {
+        display: flex;
+        align-items: center;
+        @include text($top-navbar, $work-sans, 600, 18px, 21px);
+        white-space: nowrap;
+        @include xl {
+          font-size: 16px;
+        }
+        &:hover {
+          color: $tertiary;
+        }
+      }
+      &.dropdown {
+        .dropdown-menu {
+          position: absolute;
+          left: 0;
+          background-color: $body;
+          a {
+            @include text($primary-text, $work-sans, 500, 18px, 30px);
+            display: block;
+            text-align: left;
+            padding: 6px 10px;
+            white-space: nowrap;
+            &:hover,
+            &.active {
+              background-color: $tertiary;
+            }
+          }
+        }
+        .nav-link {
+          &::after {
+            border: 0;
+            display: inline-block;
+            padding: 0.5rem;
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\2b";
+          }
+        }
+        &:last-child {
+          a {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .right-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    padding: 15px 22px;
+    @include xl {
+      gap: 10px;
+      padding: 6px 12px;
+    }
+    .nav-link {
+      border-right: 1px solid #dfdfdf55;
+      padding-right: 20px;
+    }
+    .search-btn {
+      svg {
+        @include xl {
+          width: 17px;
+        }
+      }
+    }
+    .button {
+      background-color: $tertiary;
+      @include xl {
+        font-size: 16px;
+        text-wrap: nowrap;
+        line-height: 50px;
+        padding: 0 30px;
+      }
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+}
+
+// 03: Offcanvas
+.offcanvas {
+  background-color: $body;
+  .navbar-brand {
+    padding: 0;
+    img {
+      @media screen and (max-width: 769px) {
+        max-width: 60%;
+      }
+    }
+  }
+  .offcanvas-close {
+    color: $secondary;
+  }
+  .navbar-nav {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    .nav-item {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+      .nav-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include text($primary-text, $work-sans, 600, 18px, 21px);
+        padding: 0;
+        @media screen and (max-width: 1199px) {
+          font-size: 16px;
+        }
+      }
+      &.dropdown {
+        .dropdown-menu {
+          position: absolute;
+          left: 0;
+          background-color: $secondary;
+          a {
+            @include text($primary-text, $work-sans, 600, 18px, 30px);
+            display: block;
+            text-align: left;
+            padding: 0 10px;
+            &:hover,
+            &.active {
+              background-color: $secondary;
+            }
+          }
+        }
+        .nav-link {
+          @include text($primary-text, $work-sans, 600, 18px, 21px);
+          &::after {
+            border: 0;
+            display: inline-block;
+            padding: 0.5rem;
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f078";
+          }
+        }
+      }
+    }
+  }
+  .button {
+    background-color: $secondary;
+    @media screen and (max-width: 1199px) {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// 04: Search Modal
+.search-modal {
+  .modal-title {
+    @include text($secondary-text, $work-sans, 400, 18px, 21px);
+  }
+  .form-control {
+    box-shadow: none;
+    border-color: $tertiary;
+    @include text($secondary-text, $work-sans, 400, 18px, 21px);
+  }
+  .btn {
+    background-color: $tertiary;
+    @include text($primary-text, $work-sans, 400, 18px, 21px);
+  }
+}
+
+// 05: Button hover style
+.button {
+  &::before,
+  &::after {
+    border-color: $tertiary;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $tertiary;
+  }
+}

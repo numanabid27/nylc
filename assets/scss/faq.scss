@@ -1,0 +1,182 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: banner start
+02: question-ans
+03: build-website
+==================================================*/
+
+@import "main";
+
+// 01: banner start
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: question-ans
+.faq {
+  padding: 120px 0 47px;
+  position: relative;
+  @include lg {
+    padding: 80px 0;
+  }
+  @include md {
+    padding: 40px 0;
+  }
+  .animated-circle {
+    &.right {
+      top: 0%;
+      right: -13%;
+    }
+    &.left {
+      bottom: 12%;
+      left: -13%;
+    }
+  }
+  .title {
+    @include text($primary, $work-sans, 500, 18px, 26px);
+    position: relative;
+    margin-bottom: 43px;
+    @include md {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  .heading {
+    @include text($primary-text, $marcellus, 400, 48px, 60px);
+    margin-bottom: 54px;
+    @include md {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  .description {
+    @include text($primary-text, $jost, 400, 16px, 30px);
+    max-width: 448px;
+    margin-bottom: 50px;
+    @include md {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  .button {
+    @include md {
+      font-size: 14px;
+      line-height: 40px;
+      padding: 0 30px;
+      margin-bottom: 20px;
+    }
+  }
+  .accordion {
+    .accordion-item {
+      background-color: transparent;
+      border: 0;
+      .accordion-button {
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: none;
+        @include text($primary-text, $marcellus, 400, 24px, 30px);
+        padding: 0;
+        padding-bottom: 24px;
+        margin-bottom: 31px;
+        @include md {
+          font-size: 18px;
+          padding-bottom: 14px;
+          margin-bottom: 21px;
+        }
+        &:not(.collapsed) {
+          border-bottom: 1px solid rgba(217, 10, 44, 0.2);
+          &::after {
+            @include rotate(90deg);
+          }
+        }
+        &::after {
+          background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.875 6.84766L3.09375 11.6289C2.74219 11.9805 2.21484 11.9805 1.89844 11.6289L1.08984 10.8555C0.773438 10.5039 0.773438 9.97656 1.08984 9.66016L4.5 6.28516L1.08984 2.875C0.773438 2.55859 0.773438 2.03125 1.08984 1.67969L1.89844 0.871094C2.21484 0.554688 2.74219 0.554688 3.09375 0.871094L7.875 5.65234C8.19141 6.00391 8.19141 6.53125 7.875 6.84766Z' fill='%23D90A2C'/%3E%3C/svg%3E%0A");
+        }
+      }
+      .accordion-body {
+        @include text($primary-text, $jost, 400, 16px, 30px);
+        padding: 0;
+        padding-bottom: 24px;
+        @include md {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// 03: build-website
+.build-website {
+  @include background-image("./../images/home-2/build-website-bg.png");
+  clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+  position: relative;
+  padding: 184px 0;
+  text-align: center;
+  overflow: hidden;
+  @include sm {
+    padding: 80px 0;
+    clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+  }
+  .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $body;
+    opacity: 65%;
+  }
+  h1 {
+    max-width: 610px;
+    margin: 0 auto;
+    @include text($primary-text, $marcellus, 400, 65px, 81px);
+    margin-bottom: 30px;
+    @include md {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include sm {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  a {
+    @include text($primary-text, $jost, 500, 18px, 55px);
+    background-color: $primary;
+    display: inline-block;
+    padding: 0 36px;
+    @include border-radius(3px);
+    margin-bottom: 147px;
+    @include md {
+      font-size: 14px;
+    }
+  }
+  .client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #d9d9d920;
+    padding-top: 55px;
+    @include sm {
+      padding-top: 30px;
+    }
+  }
+}

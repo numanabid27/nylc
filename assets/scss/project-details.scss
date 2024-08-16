@@ -1,0 +1,220 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Banner
+02: Project Details
+==================================================*/
+
+@import "main";
+
+// 01: banner
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: Project Details
+.project-details {
+  margin: 140px 0;
+  position: relative;
+  @include lg {
+    margin: 80px 0;
+  }
+  @include md {
+    margin: 40px 0;
+  }
+  .animated-circle {
+    &.right {
+      top: 0%;
+      right: -13%;
+    }
+    &.left {
+      bottom: 12%;
+      left: -13%;
+    }
+  }
+  .img {
+    width: 100%;
+    margin-bottom: 27px;
+    img {
+      width: 100%;
+    }
+  }
+  h2 {
+    @include text($primary-text, $marcellus, 400, 45px, 56px);
+    margin-bottom: 26px;
+    @include md {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  p {
+    @include text($primary-text, $nunito, 400, 16px, 21px);
+    margin-bottom: 54px;
+    @include md {
+      font-size: 14px;
+    }
+  }
+  .project-details-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 57px;
+    @include md {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    p {
+      @include text($primary, $nunito, 500, 24px, 32px);
+      margin-bottom: 0px;
+      @include md {
+        font-size: 18px;
+        line-height: 20px;
+      }
+      span {
+        @include text($primary-text, $jost, 400, 16px, 23px);
+        padding-left: 18px;
+        @include md {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .service-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 34px;
+    margin-bottom: 42px;
+    @include md {
+      flex-wrap: wrap;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 328px;
+    }
+    .content {
+      h1 {
+        @include text($primary-text, $marcellus, 400, 24px, 26px);
+        margin-bottom: 26px;
+        @include md {
+          font-size: 18px;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        li {
+          @include text($primary-text, $nunito, 700, 18px, 26px);
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 10px;
+          @include md {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .share-article {
+    @include md {
+      gap: 20px;
+    }
+    p {
+      @include text($primary, $old, 400, 24px, 34px);
+      margin-bottom: 0;
+      @include md {
+        font-size: 16px;
+      }
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      a {
+        width: 42px;
+        height: 42px;
+        border: 1px solid #fff;
+        display: inline-block;
+        text-align: center;
+        line-height: 42px;
+        @include border-radius(50%);
+        i {
+          color: $primary-text;
+        }
+        &:hover {
+          background-color: $primary;
+          border-color: $primary;
+          i {
+            color: #111;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    border-color: #ccff0026;
+  }
+  .project-category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+    @include md {
+      justify-content: flex-start;
+    }
+    li {
+      border: 1px solid $primary-text;
+      padding: 10px 25px;
+      @include text($primary-text, $dm-sans, 500, 15px, 26px);
+      @include border-radius(3px);
+      cursor: pointer;
+      @include transition(all, 0.3s, linear);
+      @include md {
+        padding: 8px 12px;
+      }
+      &:hover {
+        background-color: $primary;
+        border-color: $primary;
+        color: #111;
+        @include transition(all, 0.3s, linear);
+      }
+    }
+  }
+  .pagination-arrow {
+    p {
+      @include text($primary-text, $dm-sans, 500, 16px, 26px);
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      margin-bottom: 0;
+      span {
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+}

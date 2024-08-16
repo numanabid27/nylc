@@ -1,0 +1,165 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All mixin css Style
+  1.1: transition
+  1.2: background-image
+  1.3: border-radius
+  1.4: text
+  1.5: transform
+  1.6: transformX
+  1.7: transformY
+  1.8: scale
+  1.9: rotate
+02: Responsive Screen
+  2.1: sm
+  2.2: md
+  2.3: lg
+  2.4: xl
+  2.5: xl2
+  2.6: xl3
+  2.7: xl4
+
+==================================================*/
+
+/*================================================
+// 01: All mixin css Style
+==================================================*/
+
+//  1.1: transition
+@mixin transition($properties, $duration, $timing-function) {
+  transition: $properties $duration $timing-function;
+  -webkit-transition: $properties $duration $timing-function;
+  -moz-transition: $properties $duration $timing-function;
+  -ms-transition: $properties $duration $timing-function;
+  -o-transition: $properties $duration $timing-function;
+}
+
+//  1.2: background-image
+@mixin background-image($image) {
+  background-image: url($image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//  1.3: border-radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+//  1.4: text
+@mixin text($color, $family, $weight, $size, $height) {
+  color: $color;
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+//  1.5: transform
+@mixin transform($x, $y) {
+  transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+}
+
+//  1.6: transformX
+@mixin transformX($x) {
+  transform: translateX($x);
+  -webkit-transform: translateX($x);
+  -moz-transform: translateX($x);
+  -ms-transform: translateX($x);
+  -o-transform: translateX($x);
+}
+
+//  1.7: transformY
+@mixin transformY($y) {
+  transform: translateY($y);
+  -webkit-transform: translateY($y);
+  -moz-transform: translateY($y);
+  -ms-transform: translateY($y);
+  -o-transform: translateY($y);
+}
+
+//  1.8: scale
+@mixin scale($value) {
+  transform: scale($value);
+  -webkit-transform: scale($value);
+  -moz-transform: scale($value);
+  -ms-transform: scale($value);
+  -o-transform: scale($value);
+}
+
+//  1.9: rotate
+@mixin rotate($value) {
+  transform: rotate($value);
+  -webkit-transform: rotate($value);
+  -moz-transform: rotate($value);
+  -ms-transform: rotate($value);
+  -o-transform: rotate($value);
+}
+
+/*================================================
+//  02: Responsive Screen
+==================================================*/
+
+// 2.1: sm
+@mixin sm {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+// 2.2: md
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// 2.3: lg
+@mixin lg {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+// 2.4: xl
+@mixin xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+// 2.5: xl2
+@mixin xl2 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+// 2.6: xl3
+@mixin xl3 {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+// 2.7: xl4
+@mixin xl4 {
+  @media (max-width: 1850px) {
+    @content;
+  }
+}

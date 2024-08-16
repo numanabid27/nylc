@@ -1,0 +1,141 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: footer
+==================================================*/
+
+@import "main";
+
+// 01: footer
+.footer {
+  @include background-image("./../images/home-2/footer-bg.png");
+  padding-top: 142px;
+  position: relative;
+  @include md {
+    padding-top: 80px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include background-image("./../images/home-2/footer-shape.png");
+    width: 100%;
+    height: 100%;
+  }
+  .logo {
+    img {
+      @include md {
+        max-width: 60%;
+      }
+    }
+  }
+  p {
+    @include text($primary-text, $jost, 400, 16px, 25px);
+    margin: 25px 0 36px;
+    @include md {
+      font-size: 14px;
+    }
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    a {
+      width: 42px;
+      height: 42px;
+      background-color: #fff;
+      display: inline-block;
+      text-align: center;
+      line-height: 42px;
+      @include border-radius(2px);
+      i {
+        color: $secondary;
+      }
+      &:hover {
+        background-color: $secondary;
+        i {
+          color: $primary-text;
+        }
+      }
+    }
+  }
+  .footer-title {
+    @include text($primary-text, $marcellus, 400, 24px, 34px);
+    margin-bottom: 28px;
+    @include md {
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 20px;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        @include text($primary-text, $jost, 400, 17px, 36px);
+        @include md {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        &:hover {
+          svg {
+            path {
+              fill: $secondary;
+              @include transition(all, linear, 0.3s);
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .gallery-item {
+      @include md {
+        flex: 0 0 30%;
+      }
+    }
+  }
+  // tiny-footer
+  .tiny-footer {
+    margin-top: 98px;
+    padding: 22px 0;
+    border-top: 1px solid #ffffff15;
+    @include md {
+      margin-top: 50px;
+    }
+    p {
+      @include text($primary-text, $jost, 400, 16px, 26px);
+      margin: 0;
+      @include md {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+      @include md {
+        justify-content: center;
+      }
+      li {
+        a {
+          @include text($primary-text, $jost, 400, 16px, 26px);
+        }
+      }
+    }
+  }
+  // tiny-footer
+}

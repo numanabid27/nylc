@@ -1,0 +1,131 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Reset css Style
+
+==================================================*/
+
+/*================================================
+01: Reset css Style
+==================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: auto !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+a,
+p,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  @include transition(all, linear, 0.3s);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0px;
+  box-shadow: none;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  @include transition(all, linear, 0.3s);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+textarea,
+select,
+input {
+  border: 0;
+  outline: none;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+::-moz-selection {
+  color: white;
+  background: $primary;
+}
+
+::selection {
+  color: white;
+  background: $primary;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.w-fit {
+  width: fit-content;
+}

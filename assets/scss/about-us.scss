@@ -1,0 +1,308 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: banner start
+02: why choose us
+03: upcoming-events
+04: industry-expert
+05: trusted client area
+06: our-clients
+==================================================*/
+
+@import "main";
+
+// 01: banner start
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: why choose us
+.why-choose-us {
+  .section-title {
+    .subtitle {
+      color: $primary;
+      &::after {
+        background-color: $primary;
+      }
+    }
+  }
+  .image-wrap{
+    display: flex;
+    gap: 28px;
+    align-items: flex-end;
+    .image {
+      max-width: 527px;
+      max-height: 566px;
+      @include border-radius(5px);
+      overflow: hidden;
+      position: relative;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .animatedLine {
+        position: absolute;
+        top: -180px;
+        left: 10%;
+        display: flex;
+        gap: 16px;
+        @include transition(all, linear, 0.3s);
+        .animatedLine-1 {
+          width: 40px;
+          height: 156px;
+          background-color: #fff;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+        .animatedLine-2 {
+          width: 40px;
+          height: 100px;
+          background-color: #fff;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+      }
+      &:hover {
+        .animatedLine {
+          top: 0;
+          @include transition(all, linear, 0.3s);
+        }
+        .img {
+          background-color: $primary;
+          @include transition(all, linear, 0.3s);
+        }
+        a {
+          background-color: $primary;
+          color: #fff;
+        }
+      }
+    }
+    .image-line{
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      gap: 16px;
+      @include sm{
+        display: none;
+      }
+      .line{
+        height: 256px;
+        width: 28px;
+        background: $primary;
+        border-radius: 15px;
+        @include transition(all, linear, 0.3s);
+      }
+      .line-2{
+        margin-bottom: 80px;
+      }
+      &:hover{
+        .line{
+          transform: scaleY(0.8);
+        }
+      }
+    }
+  }
+}
+
+// 03: upcoming-events
+.upcoming-events {
+  .content {
+    .button {
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+        background-color: transparent;
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 04: industry-expert
+.industry-expert {
+  padding: 176px 0 140px;
+  position: relative;
+  overflow: hidden;
+  @include xl2 {
+    padding: 80px 0;
+  }
+  .section-title {
+    margin-bottom: 0;
+    .subtitle {
+      color: $primary;
+      &::after {
+        background-color: $primary;
+      }
+    }
+    .title {
+      margin-bottom: 70px;
+    }
+  }
+  .grid-item {
+    border: 1px solid #d1d1d110;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 100%;
+    @include border-radius(4px);
+    @include sm {
+      padding: 0px 0px 20px;
+      margin: 0px auto 20px;
+      .col-12 {
+        padding: 0 0px;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    h1 {
+      @include text($primary-text, $jost, 600, 26px, 34px);
+      margin-bottom: 8px;
+      @include md {
+        font-size: 18px;
+      }
+      @include sm {
+        padding: 0 15px;
+      }
+    }
+    p {
+      @include text($primary, $ubuntu, 400, 16px, 28px);
+      margin-bottom: 20px;
+      @include sm {
+        padding: 0 15px;
+      }
+    }
+    h2 {
+      @include text($primary-text, $jost, 500, 20px, 26px);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -3rem;
+        width: 35px;
+        height: 2px;
+        background-color: #ffffff30;
+        @include transformY(-50%);
+      }
+      @include md {
+        font-size: 16px;
+      }
+      @include sm {
+        padding: 0 15px;
+      }
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      @include sm {
+        padding: 0 15px;
+      }
+      li {
+        a {
+          width: 30px;
+          height: 30px;
+          background-color: #ffffff10;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          @include border-radius(2px);
+          i {
+            color: $primary-text;
+          }
+          &:hover {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 05: trusted client area
+.trusted-client-area {
+  .counting-part {
+    .counting-part-item {
+      .orb_graphic {
+        svg {
+          circle {
+            &.progress {
+              stroke: $primary;
+            }
+          }
+        }
+
+        .orb_value {
+          i {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 06: our-clients
+.our-clients {
+  .section-title {
+    .subtitle {
+      color: $primary;
+      &::after {
+        background-color: $primary;
+      }
+    }
+  }
+  .client-slider {
+    .slider-item {
+      .slider-item-style {
+        border: 1px dashed $primary;
+        .client-title-rating {
+          .client-title {
+            .img {
+              img {
+                border: 1px solid $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        border: 1px solid $primary;
+        background-color: $primary;
+        @include border-radius(50%);
+        &.swiper-pagination-bullet-active {
+          background-color: $body;
+          &::after {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

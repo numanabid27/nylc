@@ -1,0 +1,119 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: banner
+02: industry-expert
+03: fact section
+04: our-team-area
+==================================================*/
+
+@import "main";
+
+// 01: banner
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: industry-expert
+.industry-expert {
+  .animated-circle {
+    z-index: -1;
+    &.right {
+      top: 0%;
+      right: -9%;
+    }
+    &.left {
+      bottom: -35%;
+      left: -16%;
+      z-index: -1;
+    }
+  }
+  .section-title {
+    .subtitle {
+      color: $primary;
+      &::after {
+        background-color: $primary;
+      }
+    }
+    .title {
+      margin-bottom: 70px;
+    }
+  }
+  .grid-item {
+    p {
+      @include text($primary, $ubuntu, 400, 16px, 28px);
+    }
+    h2 {
+    }
+    .social-link {
+      li {
+        a {
+          &:hover {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 03: fact section
+.fact {
+  .section-title {
+    p {
+      @include text($primary, $marcellus, 400, 24px, 30px);
+    }
+  }
+}
+
+// 04: our-team-area
+.our-team-area {
+  .animated-circle {
+    z-index: -1;
+    &.left {
+      bottom: -39%;
+      left: -14%;
+      z-index: -1;
+    }
+  }
+  .section-title {
+    .subtitle {
+      color: $primary;
+      &::after {
+        background-color: $primary;
+      }
+    }
+  }
+  .card-member {
+    .card-img {
+      .social-link {
+        background-color: $primary;
+      }
+    }
+    .card-content {
+      p {
+        @include text($primary, $inter, 500, 15px, 24px);
+      }
+    }
+    &:hover {
+      .card-content {
+        background-color: $primary;
+      }
+    }
+  }
+}

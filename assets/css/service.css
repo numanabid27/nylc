@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Banner
+02: about-us
+03: project-completed
+04: solution-today
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Reset css Style
+    1.1: mixins
+    1.2: color
+    1.3: variable
+==================================================*/
+/*================================================
+01: Reset css Style
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All mixin css Style
+  1.1: transition
+  1.2: background-image
+  1.3: border-radius
+  1.4: text
+  1.5: transform
+  1.6: transformX
+  1.7: transformY
+  1.8: scale
+  1.9: rotate
+02: Responsive Screen
+  2.1: sm
+  2.2: md
+  2.3: lg
+  2.4: xl
+  2.5: xl2
+  2.6: xl3
+  2.7: xl4
+
+==================================================*/
+/*================================================
+// 01: All mixin css Style
+==================================================*/
+/*================================================
+//  02: Responsive Screen
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All Color Variable css Style
+
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Font-Family css variables
+02: Others css variables
+
+==================================================*/
+.banner {
+  background-color: #d90a2c;
+}
+.banner .banner-img {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  overflow: hidden;
+  background-image: url("./../images/about-us/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.banner .banner-img .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about-us {
+  padding: 140px 0;
+  position: relative;
+}
+@media (max-width: 992px) {
+  .about-us {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  .about-us {
+    padding: 40px 0;
+  }
+}
+.about-us .animated-circle.left {
+  bottom: 12%;
+  left: -13%;
+}
+.about-us .content {
+  max-width: 589px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 72px;
+}
+@media (max-width: 768px) {
+  .about-us .content {
+    margin-bottom: 30px;
+  }
+}
+.about-us .content .subtitle {
+  color: #d90a2c;
+}
+.about-us .content .subtitle::after {
+  background-color: #d90a2c;
+}
+.about-us .choose-up-grid-item {
+  border: 1px solid rgba(169, 169, 169, 0.1882352941);
+  padding: 60px 30px;
+  margin-bottom: 50px;
+}
+@media (max-width: 576px) {
+  .about-us .choose-up-grid-item {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    margin-top: 0px !important;
+  }
+}
+.about-us .choose-up-grid-item h2 {
+  color: #fff;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 52px;
+  padding-bottom: 25px;
+  position: relative;
+}
+@media (max-width: 576px) {
+  .about-us .choose-up-grid-item h2 {
+    font-size: 18px;
+  }
+}
+.about-us .choose-up-grid-item h2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-image: url("./../images/shape.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 57px;
+  height: 2px;
+}
+.about-us .choose-up-grid-item p {
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.062745098);
+  margin-bottom: 19px;
+}
+@media (max-width: 576px) {
+  .about-us .choose-up-grid-item p {
+    font-size: 14px;
+  }
+}
+.about-us .choose-up-grid-item .img-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-us .choose-up-grid-item .img-link a {
+  background-color: #010212;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  display: inline-block;
+  padding: 8px 29px;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+@media (max-width: 576px) {
+  .about-us .choose-up-grid-item .img-link a {
+    font-size: 14px;
+  }
+}
+.about-us .choose-up-grid-item:hover a {
+  background-color: #d90a2c;
+}
+
+.project-completed .content .play-btn {
+  position: relative;
+}
+.project-completed .content .play-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.5019607843);
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+.project-completed .content .play-btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.5019607843);
+  border-radius: 50%;
+  transition: all 200ms;
+}
+.project-completed .content .play-btn a {
+  border: 1px solid #d90a2c;
+}
+.project-completed .content .project-count {
+  background-color: #d90a2c;
+}
+
+.solution-today .animated-circle.left {
+  bottom: 12%;
+  left: -13%;
+}
+.solution-today .ready-for-future a {
+  background-color: #d90a2c;
+  border: 1px solid transparent;
+}
+.solution-today .ready-for-future a:hover {
+  background-color: transparent;
+  border: 1px solid #d90a2c;
+  color: #fff;
+}/*# sourceMappingURL=service.css.map */

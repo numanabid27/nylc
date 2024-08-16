@@ -1,0 +1,428 @@
+@charset "UTF-8";
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Navbar
+02: Offcanvas
+03: Search Modal 
+04: Button hover style
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Reset css Style
+    1.1: mixins
+    1.2: color
+    1.3: variable
+==================================================*/
+/*================================================
+01: Reset css Style
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All mixin css Style
+  1.1: transition
+  1.2: background-image
+  1.3: border-radius
+  1.4: text
+  1.5: transform
+  1.6: transformX
+  1.7: transformY
+  1.8: scale
+  1.9: rotate
+02: Responsive Screen
+  2.1: sm
+  2.2: md
+  2.3: lg
+  2.4: xl
+  2.5: xl2
+  2.6: xl3
+  2.7: xl4
+
+==================================================*/
+/*================================================
+// 01: All mixin css Style
+==================================================*/
+/*================================================
+//  02: Responsive Screen
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All Color Variable css Style
+
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Font-Family css variables
+02: Others css variables
+
+==================================================*/
+.navbar {
+  padding: 0 !important;
+}
+@media (max-width: 992px) {
+  .navbar {
+    padding: 20px 0 !important;
+  }
+}
+.navbar .container-fluid {
+  width: calc(100% - 105px);
+  margin: 0 auto;
+  padding: 0;
+}
+@media (max-width: 576px) {
+  .navbar .container-fluid {
+    width: calc(100% - 15px);
+  }
+}
+.navbar .container-fluid .navbar-brand {
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+@media (max-width: 1600px) {
+  .navbar .container-fluid .navbar-brand img {
+    max-width: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar .container-fluid .navbar-brand img {
+    max-width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .container-fluid .navbar-toggler {
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 18px;
+  }
+  .navbar .container-fluid .navbar-toggler .toggle-btn {
+    border: 1px solid #0e59f2;
+    box-shadow: none;
+    outline: 0px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+.navbar .container-fluid .navbar-nav {
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 1600px) {
+  .navbar .container-fluid .navbar-nav {
+    gap: 2px;
+  }
+}
+@media (max-width: 1400px) {
+  .navbar .container-fluid .navbar-nav {
+    gap: 0;
+  }
+}
+.navbar .container-fluid .navbar-nav .nav-item {
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+@media (max-width: 1400px) {
+  .navbar .container-fluid .navbar-nav .nav-item {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar .container-fluid .navbar-nav .nav-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.navbar .container-fluid .navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+}
+.navbar .container-fluid .navbar-nav .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  white-space: nowrap;
+}
+.navbar .container-fluid .navbar-nav .nav-item .nav-link:hover {
+  color: #0e59f2;
+}
+@media (max-width: 1400px) {
+  .navbar .container-fluid .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+}
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  left: 0;
+  background-color: #001d21;
+}
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu a {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  display: block;
+  text-align: left;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu a:hover, .navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu a.active {
+  background-color: #0e59f2;
+}
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .nav-link::after {
+  border: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f063";
+}
+.navbar .container-fluid .navbar-nav .nav-item.dropdown:last-child a::after {
+  display: none;
+}
+.navbar .container-fluid .button {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  background-color: #0e59f2;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  z-index: 2;
+  padding: 59px 82px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 1850px) {
+  .navbar .container-fluid .button {
+    padding: 59px 60px;
+  }
+}
+@media (max-width: 1600px) {
+  .navbar .container-fluid .button {
+    padding: 59px 30px;
+  }
+}
+@media (max-width: 1400px) {
+  .navbar .container-fluid .button {
+    padding: 0px 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar .container-fluid .button {
+    font-size: 14px;
+    padding: 0px 15px;
+  }
+}
+.navbar .container-fluid .menu-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  border-left: 1px solid rgba(221, 221, 221, 0.5019607843);
+  padding-left: 52px;
+}
+@media (max-width: 1850px) {
+  .navbar .container-fluid .menu-wrapper {
+    padding-left: 34px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar .container-fluid .menu-wrapper {
+    padding-left: 16px;
+    margin: 0;
+  }
+}
+.navbar .container-fluid .menu-wrapper .search-btn-wrapper {
+  border-left: 1px solid rgba(221, 221, 221, 0.5019607843);
+  display: flex;
+  align-items: center;
+  padding-left: 52px;
+  margin-left: 52px;
+}
+@media (max-width: 1850px) {
+  .navbar .container-fluid .menu-wrapper .search-btn-wrapper {
+    padding-left: 34px;
+    margin-left: 34px;
+  }
+}
+@media (max-width: 1400px) {
+  .navbar .container-fluid .menu-wrapper .search-btn-wrapper {
+    padding-left: 30px;
+    margin-left: 30px;
+  }
+  .navbar .container-fluid .menu-wrapper .search-btn-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar .container-fluid .menu-wrapper .search-btn-wrapper {
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+}
+
+.offcanvas {
+  background-color: #001d21;
+}
+.offcanvas .navbar-brand {
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .offcanvas .navbar-brand img {
+    max-width: 60%;
+  }
+}
+.offcanvas .offcanvas-close {
+  color: #0e59f2;
+}
+.offcanvas .navbar-nav {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.offcanvas .navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+}
+.offcanvas .navbar-nav .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0;
+}
+@media screen and (max-width: 1199px) {
+  .offcanvas .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+}
+.offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  left: 0;
+  background-color: #0e59f2;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu a {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  display: block;
+  text-align: left;
+  padding: 0 10px;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu a:hover, .offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu a.active {
+  background-color: #0e59f2;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .nav-link {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+.offcanvas .navbar-nav .nav-item.dropdown .nav-link::after {
+  border: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f078";
+}
+.offcanvas .button {
+  background-color: #0e59f2;
+}
+@media screen and (max-width: 1199px) {
+  .offcanvas .button {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .offcanvas .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.search-modal .modal-title {
+  color: #1d2229;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+.search-modal .form-control {
+  box-shadow: none;
+  border-color: #0e59f2;
+  color: #1d2229;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+.search-modal .btn {
+  background-color: #0e59f2;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button::before, .button::after {
+  border-color: #0e59f2;
+}
+.button:hover {
+  background-color: transparent;
+  color: #0e59f2;
+}/*# sourceMappingURL=nav-2.css.map */

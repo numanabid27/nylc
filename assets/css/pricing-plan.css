@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Banner
+02: Simple Package
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Reset css Style
+    1.1: mixins
+    1.2: color
+    1.3: variable
+==================================================*/
+/*================================================
+01: Reset css Style
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All mixin css Style
+  1.1: transition
+  1.2: background-image
+  1.3: border-radius
+  1.4: text
+  1.5: transform
+  1.6: transformX
+  1.7: transformY
+  1.8: scale
+  1.9: rotate
+02: Responsive Screen
+  2.1: sm
+  2.2: md
+  2.3: lg
+  2.4: xl
+  2.5: xl2
+  2.6: xl3
+  2.7: xl4
+
+==================================================*/
+/*================================================
+// 01: All mixin css Style
+==================================================*/
+/*================================================
+//  02: Responsive Screen
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: All Color Variable css Style
+
+==================================================*/
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Font-Family css variables
+02: Others css variables
+
+==================================================*/
+.banner {
+  background-color: #d90a2c;
+}
+.banner .banner-img {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  overflow: hidden;
+  background-image: url("./../images/about-us/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.banner .banner-img .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.simple-package .grid-package-item .content .price-link {
+  border: 1px solid rgba(217, 10, 44, 0.45);
+}
+.simple-package .grid-package-item:hover .price-link {
+  background-color: #d90a2c;
+}/*# sourceMappingURL=pricing-plan.css.map */

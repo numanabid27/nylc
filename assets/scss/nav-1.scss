@@ -1,0 +1,400 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Topbar
+02: Navbar
+03: Offcanvas
+04: Banner Section 
+05: Search Modal 
+06: Button hover style
+==================================================*/
+
+@import "main";
+
+// 01: Topbar
+.topbar {
+  background-color: #d90a2c;
+  .col-12 {
+    div {
+      @include lg {
+        flex-wrap: wrap;
+      }
+      a {
+        @include text($primary-text, $inter, 400, 16px, 30px);
+        text-decoration: underline;
+        order: 1;
+        @include lg {
+          flex: 0 0 auto;
+          order: 2;
+        }
+        @include sm {
+          flex: 1 1 100%;
+          text-align: center;
+          order: 2;
+        }
+      }
+      p {
+        @include text($primary-text, $jost, 500, 16px, 30px);
+        order: 2;
+        @include lg {
+          text-align: center;
+          flex: 0 0 100%;
+          order: 1;
+        }
+        @include sm {
+          text-align: center;
+          flex: 0 0 100%;
+        }
+      }
+      div {
+        // gap: 30px;
+        order: 3;
+        @include md {
+          flex: 0 0 auto;
+          justify-content: flex-end;
+          order: 2;
+        }
+        @include sm {
+          flex: 1 1 50%;
+          justify-content: center;
+          order: 3;
+        }
+        .dropdown {
+          flex: 0 0 auto;
+          .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            &::after {
+              border: 0;
+              display: inline-block;
+              padding: 0.5rem;
+              font: normal normal normal 14px/1 FontAwesome;
+              content: "\f078";
+            }
+            .flag-icon {
+              width: 20px;
+              height: 20px;
+              @include border-radius(50%);
+              border: 1px solid $primary-text;
+            }
+            span {
+              @include text($primary-text, $inter, 500, 16px, 30px);
+            }
+          }
+          .dropdown-menu {
+            background-color: $primary-text;
+            padding: 0;
+            li {
+              .dropdown-item {
+                text-decoration: none;
+                @include text($primary, $inter, 500, 16px, 30px);
+                &.active {
+                  @include text($primary-text, $inter, 500, 16px, 30px);
+                  background-color: $primary;
+                }
+                &:hover {
+                  @include text($primary-text, $inter, 500, 16px, 30px);
+                  background-color: $primary;
+                }
+              }
+            }
+          }
+        }
+        .social-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          @include sm {
+            gap: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 02: Navbar
+.navbar {
+  z-index: 999;
+  padding: 0;
+  padding-top: 30px;
+  .navbar-brand {
+    padding: 0;
+    img {
+      @include md {
+        max-width: 60%;
+      }
+    }
+  }
+  @include lg {
+    .navbar-toggler {
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      gap: 18px;
+      .toggle-btn {
+        border: 1px solid $primary;
+        box-shadow: none;
+        outline: 0px;
+        color: $primary-text;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .navbar-nav {
+    align-items: center;
+    gap: 30px;
+    @include xl {
+      gap: 20px;
+    }
+    .nav-item {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+      .nav-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include text($primary-text, $work-sans, 600, 18px, 21px);
+        padding: 0;
+        @include xl {
+          font-size: 16px;
+        }
+      }
+      &.dropdown {
+        .dropdown-menu {
+          position: absolute;
+          left: 0;
+          background-color: #111;
+          overflow: hidden;
+          a {
+            @include text($primary-text, $work-sans, 600, 18px, 30px);
+            display: block;
+            text-align: left;
+            padding: 6px 10px;
+            &:hover,
+            &.active {
+              background-color: $primary;
+            }
+          }
+        }
+        .nav-link {
+          @include text($primary-text, $work-sans, 600, 18px, 21px);
+          &::after {
+            border: 0;
+            display: inline-block;
+            padding: 0.5rem;
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f078";
+          }
+        }
+      }
+    }
+  }
+  .button {
+    // border: 1px solid transparent;
+    &:hover {
+      // border: 1px solid $primary;
+      // background-color: transparent;
+      // color: $primary;
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+    @include xl {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+    @include sm {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &.header--sticky {
+    padding: 20px 0;
+  }
+}
+
+// 03: Offcanvas
+.offcanvas {
+  background-color: $body;
+  .navbar-brand {
+    padding: 0;
+    img {
+      @include md {
+        max-width: 60%;
+      }
+    }
+  }
+  .offcanvas-close {
+    color: $primary;
+  }
+  .navbar-nav {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+
+    .nav-item {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+      .nav-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include text($primary-text, $work-sans, 600, 18px, 21px);
+        padding: 0;
+        @include xl {
+          font-size: 16px;
+        }
+      }
+      &.dropdown {
+        .dropdown-menu {
+          position: absolute;
+          left: 0;
+          background-color: $primary;
+          a {
+            @include text($primary-text, $work-sans, 600, 18px, 30px);
+            display: block;
+            text-align: left;
+            padding: 0 10px;
+            &:hover,
+            &.active {
+              background-color: $primary;
+            }
+          }
+        }
+        .nav-link {
+          @include text($primary-text, $work-sans, 600, 18px, 21px);
+          &::after {
+            border: 0;
+            display: inline-block;
+            padding: 0.5rem;
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f078";
+          }
+        }
+      }
+    }
+  }
+  .button {
+    @include xl {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+    @include lg {
+      margin-top: 20px;
+    }
+    @include sm {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// 04: Banner Section
+.banner-section {
+  max-width: 911px;
+  text-align: center;
+  margin: 0 auto;
+  padding:100px 0;
+  z-index: 1;
+  position: relative;
+  @include md {
+    padding: 60px 0;
+  }
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .subject {
+    background: $primary-text;
+    max-width: 306px;
+    margin: 0 auto;
+    padding: 14px 0;
+    @include text($primary, $jost, 500, 18px, 26px);
+
+    @include border-radius(5px);
+    margin-bottom: 40px;
+    @include sm {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  .heading {
+    @include text($primary-text, $marcellus, 400, 70px, 82px);
+
+    margin-bottom: 47px;
+    @include md {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include sm {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  .description {
+    @include text($primary-text, $jost, 500, 18px, 35px);
+    max-width: 517px;
+    margin: 0 auto 50px;
+    a {
+      @include text($primary-text, $jost, 500, 18px, 35px);
+    }
+    @include sm {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  .button {
+    @include sm {
+      font-size: 14px;
+    }
+  }
+}
+
+// 05: Search Modal
+.search-modal {
+  .modal-title {
+    @include text($secondary-text, $work-sans, 400, 18px, 21px);
+  }
+  .form-control {
+    box-shadow: none;
+    border-color: $primary;
+    @include text($secondary-text, $work-sans, 400, 18px, 21px);
+  }
+  .btn {
+    background-color: $primary;
+    @include text($primary-text, $work-sans, 400, 18px, 21px);
+  }
+}
+
+
+// 06: Button hover style
+.button {
+  &::before,
+  &::after {
+    border-color: $primary;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+}

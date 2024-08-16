@@ -1,0 +1,307 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Navbar
+02: Offcanvas
+03: Search Modal 
+04: Button hover style
+==================================================*/
+
+@import "main";
+
+// 01: Navbar
+.navbar {
+  padding: 0 !important;
+  @include lg {
+    padding: 20px 0 !important;
+  }
+  .container-fluid {
+    width: calc(100% - 105px);
+    margin: 0 auto;
+    padding: 0;
+    @include sm {
+      width: calc(100% - 15px);
+    }
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      flex-shrink: 0;
+      img {
+        @include xl3 {
+          max-width: 80%;
+        }
+        @include xl {
+          max-width: 60%;
+        }
+      }
+    }
+    @include lg {
+      .navbar-toggler {
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        gap: 18px;
+        .toggle-btn {
+          border: 1px solid $secondary;
+          box-shadow: none;
+          outline: 0px;
+          color: $primary-text;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .navbar-nav {
+      align-items: center;
+      gap: 30px;
+      @include xl3 {
+        gap: 2px;
+      }
+      @include xl2 {
+        gap: 0;
+      }
+      .nav-item {
+        padding-top: 38px;
+        padding-bottom: 38px;
+        @include xl2 {
+          padding-top: 28px;
+          padding-bottom: 28px;
+        }
+        @include xl {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+        .nav-link {
+          display: flex;
+          align-items: center;
+          @include text($primary-text, $work-sans, 500, 18px, 21px);
+          white-space: nowrap;
+          &:hover {
+            color: $secondary;
+          }
+          @include xl2 {
+            font-size: 14px;
+          }
+        }
+        &.dropdown {
+          .dropdown-menu {
+            position: absolute;
+            left: 0;
+            background-color: $body;
+            a {
+              @include text($primary-text, $work-sans, 500, 18px, 30px);
+              display: block;
+              text-align: left;
+              padding: 6px 10px;
+              white-space: nowrap;
+              &:hover,
+              &.active {
+                background-color: $secondary;
+              }
+            }
+          }
+          .nav-link {
+            &::after {
+              border: 0;
+              display: inline-block;
+              padding: 0.5rem;
+              font: normal normal normal 14px/1 FontAwesome;
+              content: "\f063";
+            }
+          }
+          &:last-child {
+            a {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .button {
+      @include border-radius(0px);
+      background-color: $secondary;
+      @include text($primary-text, $nunito, 600, 22px, 30px);
+      z-index: 2;
+      padding: 59px 82px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @include xl4 {
+        padding: 59px 60px;
+      }
+      @include xl3 {
+        padding: 59px 30px;
+      }
+      @include xl2 {
+        padding: 0px 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+      }
+      @include xl {
+        font-size: 14px;
+        padding: 0px 15px;
+      }
+    }
+
+    .menu-wrapper {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      margin: auto;
+      border-left: 1px solid #dddddd80;
+      padding-left: 52px;
+      @include xl4 {
+        padding-left: 34px;
+      }
+      @include xl {
+        padding-left: 16px;
+        margin: 0;
+      }
+      .search-btn-wrapper {
+        border-left: 1px solid #dddddd80;
+        display: flex;
+        align-items: center;
+        padding-left: 52px;
+        margin-left: 52px;
+        @include xl4 {
+          padding-left: 34px;
+          margin-left: 34px;
+        }
+        @include xl2 {
+          padding-left: 30px;
+          margin-left: 30px;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        @include xl {
+          padding-left: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+// 02: Offcanvas
+.offcanvas {
+  background-color: $body;
+  .navbar-brand {
+    padding: 0;
+    img {
+      @include md {
+        max-width: 60%;
+      }
+    }
+  }
+  .offcanvas-close {
+    color: $secondary;
+  }
+  .navbar-nav {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    .nav-item {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+      .nav-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include text($primary-text, $work-sans, 600, 18px, 21px);
+        padding: 0;
+        @media screen and (max-width: 1199px) {
+          font-size: 16px;
+        }
+      }
+      &.dropdown {
+        .dropdown-menu {
+          position: absolute;
+          left: 0;
+          background-color: $secondary;
+          a {
+            @include text($primary-text, $work-sans, 600, 18px, 30px);
+            display: block;
+            text-align: left;
+            padding: 0 10px;
+            &:hover,
+            &.active {
+              background-color: $secondary;
+            }
+          }
+        }
+        .nav-link {
+          @include text($primary-text, $work-sans, 600, 18px, 21px);
+          &::after {
+            border: 0;
+            display: inline-block;
+            padding: 0.5rem;
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f078";
+          }
+        }
+      }
+    }
+  }
+  .button {
+    background-color: $secondary;
+    @media screen and (max-width: 1199px) {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// 03: Search Modal
+.search-modal {
+  .modal-title {
+    @include text($secondary-text, $work-sans, 400, 18px, 21px);
+  }
+  .form-control {
+    box-shadow: none;
+    border-color: $secondary;
+    @include text($secondary-text, $work-sans, 400, 18px, 21px);
+  }
+  .btn {
+    background-color: $secondary;
+    @include text($primary-text, $work-sans, 400, 18px, 21px);
+  }
+}
+
+// 04: Button hover style
+.button {
+  &::before,
+  &::after {
+    border-color: $secondary;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $secondary;
+  }
+}

@@ -1,0 +1,319 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Banner
+01: Service Details
+==================================================*/
+
+@import "main";
+
+// 01: Banner
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: Service Details
+.service-details {
+  padding: 140px 0;
+  position: relative;
+  @include lg {
+    padding: 80px 0;
+  }
+  @include md {
+    padding: 40px 0;
+  }
+  .animated-circle {
+    z-index: -1;
+    &.right {
+      bottom: 0%;
+      right: -9%;
+    }
+    &.left {
+      top: 28%;
+      left: -14%;
+    }
+  }
+  .left-bar {
+    @include md {
+      margin-top: 20px;
+    }
+    .service-1 {
+      img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 30px;
+      }
+      h2 {
+        @include text($primary-text, $marcellus, 400, 30px, 45px);
+        margin-bottom: 20px;
+        @include md {
+          font-size: 18px;
+        }
+      }
+      p {
+        @include text($primary-text, $jost, 400, 16px, 26px);
+        margin-bottom: 47px;
+        @include md {
+          font-size: 14px;
+        }
+      }
+    }
+    .service-2 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 34px;
+      margin-bottom: 42px;
+      @include md {
+        flex-wrap: wrap;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 330px;
+        min-height: 340px;
+        object-fit: cover;
+      }
+      .content {
+        h2 {
+          @include text($primary-text, $marcellus, 400, 24px, 26px);
+          margin-bottom: 26px;
+          @include md {
+            font-size: 18px;
+          }
+        }
+        ul {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+          gap: 15px;
+          li {
+            @include text($primary-text, $nunito, 700, 18px, 26px);
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 10px;
+            @include md {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .service-3 {
+      overflow: hidden;
+      .img-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+        margin-bottom: 30px;
+        @include md {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        img {
+          flex: 1 1 auto;
+        }
+      }
+      h2 {
+        @include text($primary-text, $marcellus, 400, 30px, 32px);
+        margin-bottom: 20px;
+        @include md {
+          font-size: 18px;
+        }
+      }
+      p {
+        @include text($primary-text, $jost, 400, 16px, 26px);
+        @include md {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .right-bar {
+    form {
+      background-color: $right-side-bar;
+      padding: 22px 29px;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      input {
+        border: 1px solid $primary;
+        width: 100%;
+        @include text($primary, $old, 700, 16px, 26px);
+        background: transparent;
+        padding: 13px 19px;
+        @include border-radius(4px);
+        @include md {
+          padding: 10px 16px;
+        }
+        &::placeholder {
+          @include text($primary, $old, 700, 16px, 26px);
+        }
+      }
+      button {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        padding: 15px 20px;
+        background-color: $primary;
+        @include border-radius(0px 4px 4px 0px);
+        @include md {
+          padding: 11px 16px;
+        }
+      }
+    }
+    .main-service {
+      padding: 40px 31px;
+      background-color: $right-side-bar;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      h2 {
+        @include text($primary, $marcellus, 400, 24px, 26px);
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 44px;
+        @include md {
+          font-size: 18px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 58px;
+          height: 2px;
+          background-color: $primary;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 31px;
+        li {
+          width: 100%;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ffffff10;
+            @include text($primary-text, $nunito, 700, 17px, 26px);
+            @include transition(all, linear, 0.3s);
+            &:hover {
+              border-bottom: 1px solid $primary;
+              @include text($primary, $nunito, 700, 17px, 26px);
+              svg {
+                path {
+                  fill: $primary;
+                  @include transition(all, linear, 0.3s);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .banner-adv {
+      margin-bottom: 25px;
+      @media screen and (max-width:767px){
+        display: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .popular-tags {
+      padding: 40px 31px;
+      background-color: $right-side-bar;
+      margin-bottom: 25px;
+      @include md {
+        padding: 12px 16px;
+      }
+      h2 {
+        @include text($primary, $marcellus, 400, 24px, 26px);
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 44px;
+        @include md {
+          font-size: 18px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 58px;
+          height: 2px;
+          background-color: $primary;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 9px;
+        li {
+          flex: 0 0 auto;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d90a2c4d;
+            @include text($primary-text, $nunito, 700, 17px, 45px);
+            @include transition(all, linear, 0.3s);
+            padding: 0 20px;
+            @include border-radius(3px);
+            @include md {
+              padding: 0 10px;
+              font-size: 14px;
+            }
+            &:hover {
+              border-color: $primary;
+              color: $primary-text;
+              background-color: $primary;
+              transform: translateY(-3px) scale(1.09);
+              -webkit-transform: translateY(-3px) scale(1.09);
+              -moz-transform: translateY(-3px) scale(1.09);
+              -ms-transform: translateY(-3px) scale(1.09);
+              -o-transform: translateY(-3px) scale(1.09);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-adv_mobile{
+  display: none;
+  @media screen and (max-width:767px){
+    display: block;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,255 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: Banner
+02: Team Member Info
+==================================================*/
+
+@import "main";
+
+// 01: Banner
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: Team Member Info
+.team-member-info {
+  margin: 140px 0;
+  position: relative;
+  @include lg {
+    margin: 80px 0;
+  }
+  @include md {
+    margin: 40px 0;
+  }
+  .animated-circle {
+    &.right {
+      top: 0%;
+      right: -13%;
+    }
+    &.left {
+      bottom: 24%;
+      left: -13%;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .team-bio {
+    color: #fff;
+    h4 {
+      @include text($primary-text, $marcellus, 400, 30px, 26px);
+      margin-bottom: 31px;
+      @include md {
+        margin-top: 30px;
+        font-size: 20px;
+      }
+    }
+    .table {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 13px;
+      margin-bottom: 43px;
+      div {
+        border-bottom: 1px solid #d9d9d91a;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        padding-bottom: 15px;
+        p {
+          @include text($primary-text, $nunito, 400, 18px, 28px);
+          @include md {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      li {
+        a {
+          border: 1px solid #d90a2c;
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 15px;
+          color: #d90a2c;
+          @include border-radius(50%);
+
+          &:hover {
+            background-color: #d90a2c;
+            color: #111;
+          }
+        }
+      }
+    }
+  }
+  .summary {
+    margin-top: 33px;
+    margin-bottom: 56px;
+    h5 {
+      @include text($primary-text, $marcellus, 400, 30px, 40px);
+      margin-bottom: 20px;
+      @include md {
+        font-size: 20px;
+      }
+    }
+    p {
+      @include text($primary-text, $nunito, 400, 16px, 26px);
+      @include md {
+        font-size: 14px;
+      }
+    }
+  }
+  .professional-details {
+    hr {
+      border-color: #ccff006b;
+      padding-top: 81px;
+      @include md {
+        padding-top: 40px;
+      }
+    }
+    h4 {
+      @include text($primary-text, $marcellus, 400, 24px, 30px);
+      margin-bottom: 42px;
+      @include md {
+        font-size: 18px;
+      }
+    }
+    .progress-bar {
+      margin-bottom: 40px;
+      .progress-title-holder {
+        padding-bottom: 7px;
+        position: relative;
+        margin: 5px 0;
+        @include text($primary-text, $inter, 600, 18px, 28px);
+        text-align: left;
+        @include md {
+          font-size: 14px;
+        }
+        .progress-number-wrapper {
+          .progress-number-mark {
+            margin-bottom: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include transformX(-50%);
+          }
+        }
+      }
+      .progress-content-outter {
+        height: 3px;
+        .progress-content {
+          height: 3px;
+          background-color: #d90a2c;
+          width: 0%; /* Initial value */
+        }
+      }
+    }
+    .experience {
+      div {
+        margin-bottom: 40px;
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            &:first-child {
+              @include text($primary-text, $inter, 600, 18px, 28px);
+              @include md {
+                font-size: 14px;
+              }
+            }
+            @include text($primary-text, $inter, 500, 14px, 16px);
+            @include md {
+              font-size: 12px;
+            }
+          }
+        }
+        span {
+          @include text($primary-text, $manrope, 400, 16px, 30px);
+          display: inline-block;
+          @include md {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .career-details {
+    hr {
+      border-color: #ccff006b;
+      padding-top: 81px;
+    }
+    h4 {
+      @include text($primary-text, $marcellus, 400, 24px, 30px);
+      margin-bottom: 42px;
+      @include md {
+        font-size: 18px;
+      }
+    }
+    .experience {
+      div {
+        margin-bottom: 40px;
+        hr {
+          padding-top: 0;
+        }
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            &:first-child {
+              @include text($primary-text, $inter, 600, 18px, 28px);
+              @include md {
+                font-size: 16px;
+              }
+            }
+            @include text($primary-text, $inter, 500, 14px, 16px);
+            @include md {
+              font-size: 12px;
+            }
+            sup {
+              @include text($primary-text, $inter, 400, 14px, 16px);
+              @include md {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        span {
+          @include text($primary-text, $manrope, 400, 16px, 30px);
+          display: inline-block;
+          @include md {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

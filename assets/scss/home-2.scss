@@ -1,0 +1,956 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: banner
+02: about-us
+03: build-website
+04: solution-today
+05: industry-expert
+06: project-completed
+07: why choose us
+08: our-clients
+09: our-office
+10: latest-news
+11: footer
+12: preloader
+13: bottom to top
+14: selection text
+==================================================*/
+
+@import "main";
+
+// 01: banner
+.banner {
+  width: calc(100% - 105px);
+  margin: 0 auto;
+  background-color: $primary;
+  overflow: hidden;
+  @include background-image("./../images/home-2/banner.png");
+  position: relative;
+  @include sm {
+    width: calc(100% - 15px);
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    .banner-section {
+      padding: 275px 0;
+      position: relative;
+      @include xl2 {
+        padding: 150px 0;
+      }
+      @include md {
+        padding: 80px 0;
+      }
+      @include sm {
+        padding: 40px 0;
+      }
+      .subject {
+        padding: 14px 0;
+        @include text($primary-text, $marcellus, 400, 30px, 40px);
+        margin-bottom: 30px;
+        @include md {
+          font-size: 25px;
+          line-height: 30px;
+          margin-bottom: 20px;
+        }
+        @include sm {
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 15px;
+        }
+      }
+      .heading {
+        @include text($primary-text, $marcellus, 400, 75px, 75px);
+        margin-bottom: 60px;
+        @include xl {
+          font-size: 40px;
+          line-height: 50px;
+        }
+        @include md {
+          font-size: 35px;
+          line-height: 40px;
+          margin-bottom: 30px;
+        }
+        @include sm {
+          font-size: 22px;
+          line-height: 30px;
+          margin-bottom: 14px;
+        }
+      }
+      a {
+        background-color: $secondary;
+        @include text($primary-text, $jost, 500, 18px, 55px);
+        @include md {
+          font-size: 14px;
+        }
+        border: 1px solid transparent;
+        &:hover {
+          border-color: $secondary;
+          color: $primary-text;
+          background-color: transparent;
+          svg {
+            path {
+              fill: $secondary;
+            }
+          }
+        }
+      }
+    }
+    .social-link {
+      width: calc(100% - 40%);
+      position: absolute;
+      right: -1px;
+      bottom: 0;
+      background: $body;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 43px;
+      padding-bottom: 50px;
+      padding-right: 70px;
+      gap: 20px;
+      clip-path: polygon(4% 1%, 100% 0, 100% 100%, 0% 100%);
+      @include md {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 5px;
+      }
+      @include sm {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        position: relative;
+        bottom: -1px;
+      }
+      p {
+        @include text($primary-text, $jost, 500, 16px, 28px);
+        @include md {
+          font-size: 14px;
+        }
+        @include sm {
+          font-size: 12px;
+        }
+      }
+      .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        li {
+          a {
+            background-color: $primary-text;
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            @include border-radius(50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              background-color: $secondary;
+              color: $primary-text;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 02: about-us
+.about-us {
+  padding: 140px 0;
+  position: relative;
+  overflow: hidden;
+  @include md {
+    padding: 80px 0;
+  }
+  .content {
+    text-align: center;
+    margin-bottom: 72px;
+    @include md {
+      margin-bottom: 30px;
+    }
+    .subtitle {
+      color: $secondary;
+      &::after {
+        background-color: $secondary;
+      }
+    }
+  }
+  .choose-up-grid-item {
+    border: 1px solid #a9a9a930;
+    padding: 60px 30px;
+    margin-bottom: 50px;
+    @include sm {
+      padding: 20px 15px;
+      margin-bottom: 20px;
+      margin-top: 0px !important;
+    }
+    h2 {
+      @include text($primary-text, $marcellus, 400, 24px, 30px);
+      margin-bottom: 52px;
+      padding-bottom: 25px;
+      position: relative;
+      @include sm {
+        font-size: 18px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        @include background-image("./../images/home-2/shape.png");
+        width: 57px;
+        height: 2px;
+      }
+    }
+    p {
+      @include text($primary-text, $jost, 400, 16px, 24px);
+      padding-bottom: 25px;
+      border-bottom: 1px solid #dddddd10;
+      margin-bottom: 19px;
+      @include sm {
+        font-size: 14px;
+      }
+    }
+    .img-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        background-color: #010212;
+        @include border-radius(35px);
+        display: inline-block;
+        padding: 8px 29px;
+        @include text($primary-text, $jost, 500, 18px, 28px);
+        @include sm {
+          font-size: 14px;
+        }
+      }
+    }
+    &:hover {
+      a {
+        background-color: #0e59f2;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -28%;
+    left: 0;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -46%;
+    right: -46rem;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+}
+
+// 03: build-website
+.build-website {
+  @include background-image("./../images/home-2/build-website-bg.png");
+  clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+  position: relative;
+  padding: 184px 0;
+  text-align: center;
+  overflow: hidden;
+  @include sm {
+    padding: 80px 0;
+    clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+  }
+  .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $body;
+    opacity: 65%;
+  }
+  h1 {
+    max-width: 610px;
+    margin: 0 auto;
+    @include text($primary-text, $marcellus, 400, 65px, 81px);
+    margin-bottom: 30px;
+    @include md {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include sm {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  a {
+    @include text($primary-text, $jost, 500, 18px, 55px);
+    background-color: $secondary;
+    display: inline-block;
+    padding: 0 36px;
+    @include border-radius(3px);
+    margin-bottom: 147px;
+    @include md {
+      font-size: 14px;
+    }
+    border: 1px solid transparent;
+    &:hover {
+      border-color: $secondary;
+      color: $primary-text;
+      background-color: transparent;
+      svg {
+        path {
+          fill: $secondary;
+        }
+      }
+    }
+  }
+  .client-logo {
+    border-top: 1px solid #d9d9d920;
+    padding-top: 55px;
+    @include sm {
+      padding-top: 30px;
+    }
+  }
+}
+
+// 04: solution-today
+.solution-today {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  .ready-for-future {
+    .content {
+      a {
+        background-color: $secondary;
+      }
+    }
+  }
+}
+
+// 05: industry-expert
+.industry-expert {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -6%;
+    left: -24rem;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -46%;
+    right: -46rem;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  .section-title {
+    margin-bottom: 0;
+    .subtitle {
+      color: $secondary;
+      &::after {
+        background-color: $secondary;
+      }
+    }
+  }
+  .grid-item {
+    p {
+      @include text($secondary, $ubuntu, 400, 16px, 28px);
+    }
+    .social-link {
+      li {
+        a {
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 06: project-completed
+.project-completed {
+  .content {
+    .play-btn {
+      position: relative;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 180px;
+        height: 180px;
+        background: rgba(255, 255, 255, 0.5019607843);
+        border-radius: 50%;
+        animation: pulse-border 1500ms ease-out infinite;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 180px;
+        height: 180px;
+        background: rgba(255, 255, 255, 0.5019607843);
+        border-radius: 50%;
+        transition: all 200ms;
+      }
+      a {
+        border: 1px solid $secondary;
+      }
+    }
+    .project-count {
+      background-color: $secondary;
+    }
+  }
+}
+
+// 07: why choose us
+.why-choose-us {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -12rem;
+    left: -17rem;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  .image-wrap{
+    display: flex;
+    gap: 28px;
+    align-items: flex-end;
+    .image {
+      max-width: 527px;
+      max-height: 566px;
+      @include border-radius(5px);
+      overflow: hidden;
+      position: relative;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .animatedLine {
+        position: absolute;
+        top: -180px;
+        left: 10%;
+        display: flex;
+        gap: 16px;
+        @include transition(all, linear, 0.3s);
+        .animatedLine-1 {
+          width: 40px;
+          height: 156px;
+          background-color: #fff;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+        .animatedLine-2 {
+          width: 40px;
+          height: 100px;
+          background-color: #fff;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+      }
+      &:hover {
+        .animatedLine {
+          top: 0;
+          @include transition(all, linear, 0.3s);
+        }
+        .img {
+          background-color: $primary;
+          @include transition(all, linear, 0.3s);
+        }
+        a {
+          background-color: $primary;
+          color: #fff;
+        }
+      }
+    }
+    .image-line{
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      gap: 16px;
+      @include sm{
+        display: none;
+      }
+      .line{
+        height: 256px;
+        width: 28px;
+        background: $secondary;
+        border-radius: 15px;
+        @include transition(all, linear, 0.3s);
+      }
+      .line-2{
+        margin-bottom: 80px;
+      }
+      &:hover{
+        .line{
+          transform: scaleY(0.8);
+        }
+      }
+    }
+  }
+  .section-title {
+    .subtitle {
+      color: $secondary;
+      &::after {
+        background-color: $secondary;
+      }
+    }
+  }
+}
+
+// 08: our-clients
+.our-clients {
+  padding: 0 0 140px;
+  position: relative;
+  overflow: hidden;
+  @include md {
+    padding: 80px 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -19%;
+    right: -30%;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  .section-title {
+    margin-bottom: 70px;
+    .subtitle {
+      color: $secondary;
+      &::after {
+        background-color: $secondary;
+      }
+    }
+  }
+  .client-slider {
+    padding-bottom: 60px;
+    .slider-item {
+      padding: 0 15px;
+      .slider-item-style {
+        border: 1px dashed $secondary;
+        padding: 51px 61px;
+        width: 100%;
+        @include xl2 {
+          padding: 10px 16px;
+        }
+        .client-title-rating {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          @include sm {
+            gap: 30px;
+            flex-direction: column;
+          }
+          .client-title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            .img {
+              img {
+                width: 85px;
+                height: 85px;
+                @include border-radius(50%);
+                border: 1px solid $secondary;
+              }
+            }
+            .content {
+              h2 {
+                @include text($primary-text, $marcellus, 400, 22px, 27px);
+                margin-bottom: 13px;
+                @include sm {
+                  font-size: 18px;
+                }
+              }
+              p {
+                @include text($primary-text, $jost, 400, 16px, 34px);
+                @include sm {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+              }
+            }
+          }
+          .client-rating {
+            ul {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 12px;
+              li {
+                i {
+                  color: #ffb700;
+                }
+              }
+            }
+          }
+        }
+        .client-comment {
+          h4 {
+            @include text($primary-text, $marcellus, 400, 18px, 27px);
+            margin-bottom: 15px;
+            @include sm {
+              font-size: 16px;
+            }
+          }
+          p {
+            @include text($primary-text, $jost, 400, 16px, 26px);
+            position: relative;
+            @include sm {
+              font-size: 14px;
+            }
+            img {
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 15px;
+      bottom: 0;
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $secondary;
+        @include border-radius(50%);
+        &.swiper-pagination-bullet-active {
+          position: relative;
+          overflow: hidden;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            @include border-radius(50%);
+            background-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 09: our-office
+.our-office {
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .office-address {
+    background-color: $secondary;
+    padding: 94px 59px;
+    @include xl2 {
+      padding: 30px 49px;
+    }
+    @include sm {
+      padding: 10px 16px;
+    }
+    h2 {
+      @include text($primary-text, $marcellus, 400, 45px, 56px);
+      margin-bottom: 42px;
+      @include md {
+        font-size: 30px;
+        margin-bottom: 32px;
+      }
+      @include sm {
+        font-size: 22px;
+        margin-bottom: 22px;
+      }
+    }
+
+    .office-address-grid {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 90px;
+      @include xl2 {
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      @include sm {
+        gap: 20px;
+      }
+      .office-address-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        .img {
+          img {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            min-height: 45px;
+          }
+        }
+        .content {
+          flex: 0 0 auto;
+          p {
+            @include text($primary-text, $marcellus, 400, 22px, 34px);
+            @include md {
+              font-size: 18px;
+            }
+            @include sm {
+              font-size: 16px;
+            }
+            span {
+              @include text($primary-text, $marcellus, 400, 16px, 34px);
+              @include md {
+                font-size: 14px;
+              }
+              @include sm {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 10: latest-news
+.latest-news {
+  padding: 140px 0;
+  position: relative;
+  overflow: hidden;
+  @include md {
+    padding: 80px 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -19%;
+    left: -30%;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -19%;
+    right: -30%;
+    @include background-image("./../images/home-2/choose-us-shape-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include md {
+      display: none;
+    }
+  }
+  .section-title {
+    max-width: 499px;
+    margin: 0 auto 70px;
+    text-align: center;
+    .subtitle {
+      color: $secondary;
+      &::after {
+        background-color: $secondary;
+      }
+    }
+  }
+  .img {
+    img {
+      width: 100%;
+    }
+    margin-bottom: 23px;
+  }
+  .content {
+    @include md {
+      margin-bottom: 20px;
+    }
+    .date {
+      @include text($primary-text, $marcellus, 400, 16px, 20px);
+      margin-bottom: 17px;
+      @include md {
+        font-size: 14px;
+      }
+      @include sm {
+        font-size: 12px;
+      }
+    }
+    h1 {
+      @include text($primary-text, $marcellus, 400, 24px, 30px);
+      @include md {
+        font-size: 18px;
+      }
+      @include sm {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// 11: footer
+.footer {
+  .social-link {
+    a {
+      i {
+        color: $secondary;
+      }
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+  }
+
+  .footer-link {
+    li {
+      a {
+        &:hover {
+          svg {
+            path {
+              fill: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 12: preloader
+.loader:after {
+  border-top-color: $secondary;
+  border-right-color: $secondary;
+  border-bottom-color: $secondary;
+}
+
+// 13: bottom to top
+.progress-wrap {
+  &::after {
+    color: $secondary;
+  }
+  svg {
+    &.progress-circle {
+      path {
+        stroke: $secondary;
+      }
+    }
+  }
+}
+
+// 14: selection text
+::selection {
+  color: white;
+  background: $secondary;
+}
+
+::-moz-selection {
+  color: white;
+  background: $secondary;
+}

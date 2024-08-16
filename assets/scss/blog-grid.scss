@@ -1,0 +1,48 @@
+/*================================================
+Template name: Acnalys – Business Consulting - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: banner start
+02: service-details
+==================================================*/
+
+@import "main";
+
+// 01: banner start
+.banner {
+  background-color: $primary;
+  .banner-img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    @include background-image("./../images/about-us/banner.png");
+    position: relative;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// 02: service-details
+.latest-news {
+  .latest-news-grid-item {
+    &:hover {
+      .content {
+        h1 {
+          border-color: $primary;
+        }
+        a {
+          svg {
+            circle {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
