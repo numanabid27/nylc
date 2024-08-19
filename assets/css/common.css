@@ -281,6 +281,10 @@ body {
   box-shadow: 2px 0 70px hsla(0, 0%, 13%, 0.15);
 }
 
+.navbar-brand img {
+  max-width: 102px !important;
+}
+
 .word-line {
   overflow: hidden;
 }
@@ -561,7 +565,7 @@ a.blantershow-chat svg {
 }
 
 .info-avatar img {
-  width: 35%;
+  width: 24%;
 }
 
 a.informasi {

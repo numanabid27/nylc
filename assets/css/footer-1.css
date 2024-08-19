@@ -116,6 +116,9 @@ Author url: https://themeforest.net/user/website_stock
   width: 100%;
   height: 100%;
 }
+.footer .logo img {
+  width: 36%;
+}
 @media (max-width: 768px) {
   .footer .logo img {
     max-width: 60%;

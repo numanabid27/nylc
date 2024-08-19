@@ -779,7 +779,7 @@ $(document).on("click", "#send-it", function () {
   if ("" != a.value) {
     var b = $("#get-number").text(),
       c = document.getElementById("chat-input").value,
-      d = "https://wa.me/+4412458797",
+      d = "https://wa.me/+905463112231",
       e = b,
       f = "&text=" + c;
     if (
