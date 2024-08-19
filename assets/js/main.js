@@ -848,36 +848,51 @@ $(document).on("click", "#send-it", function () {
 
   // phone
   document.addEventListener("DOMContentLoaded", function () {
-    const phoneInputFields = ["#phone"];
-    phoneInputFields.forEach(function (selector) {
-      const phoneInputField = document.querySelector(selector);
-      if (phoneInputField) {
-        const phoneInput = window.intlTelInput(phoneInputField, {
-          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-          initialCountry: "auto",
-          geoIpLookup: function (callback) {
-            fetch('https://ipinfo.io?token=<your-token-here>', { headers: { 'Accept': 'application/json' } })
-              .then(response => response.json())
-              .then(data => {
-                const countryCode = (data && data.country) ? data.country : "us";
-                callback(countryCode);
-              })
-              .catch(() => callback("us"));
-          },
-          placeholderNumberType: "MOBILE",
-          separateDialCode: true, 
-        });
-        phoneInputField.value = ""; 
-      }
-    });
+    const phoneInputField = document.querySelector("#phone");
+  
+    if (phoneInputField) {
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        initialCountry: "auto",
+        geoIpLookup: function (callback) {
+          fetch('https://ipinfo.io?token=<your-token-here>', { headers: { 'Accept': 'application/json' } })
+            .then(response => response.json())
+            .then(data => {
+              const countryCode = (data && data.country) ? data.country : "us";
+              callback(countryCode);
+            })
+            .catch(() => callback("us"));
+        },
+        placeholderNumberType: "MOBILE",
+        separateDialCode: true,
+      });
+  
+      phoneInputField.value = "";
+  
+      phoneInputField.addEventListener("countrychange", function() {
+        const selectedCountryData = phoneInput.getSelectedCountryData();
+        const areaCodeInput = document.getElementById("area-code");
+        const numberInput = document.getElementById("number");
+        
+        // Set the area code
+        areaCodeInput.value = selectedCountryData.dialCode;
+        
+        // Dynamically set the maxlength of area code based on the length of the dial code
+        areaCodeInput.maxLength = selectedCountryData.dialCode.length;
+        
+        // Set the number input field to accept the correct number of digits
+        const phoneLength = selectedCountryData.format.replace(/\D/g, '').length;
+        numberInput.maxLength = phoneLength;
+      });
+    }
   });
   
-
   function moveToNext(current, nextFieldId) {
     if (current.value.length >= current.maxLength) {
       document.getElementById(nextFieldId).focus();
     }
   }
+  
 
   // validation
 
@@ -916,8 +931,8 @@ $(document).on("click", "#send-it", function () {
       hasError = true;
     }
 
-    if (areaCode.length !== 3 || number.length !== 7) {
-      tellError.textContent = "Please enter a valid area code and phone number.";
+    if (number.length !== 7) {
+      tellError.textContent = "Please enter a valid phone number.";
       hasError = true;
     }
   
@@ -948,7 +963,7 @@ $(document).on("click", "#send-it", function () {
       const areaCode = document.getElementById("area-code").value.trim();
       const number = document.getElementById("number").value.trim();
       
-      if (areaCode.length === 3 && number.length === 7) {
+      if (number.length === 7) {
         document.getElementById("tellError").textContent = "";
       }
     });

@@ -869,15 +869,14 @@
                 </div>
                 <div class="mt-3">
                   <label for="phone" class="form-label d-block">Phone Code</label>
-                  <div class="d-flex phoneField">
+                    <div class="d-flex phoneField">
                     <div class="phoneField_code">
                       <input id="phone" type="tel" name="phone" class="form-control" data-placeholder="Enter your Phone Number" autocomplete="off" />
                     </div>
                     <div class="phone-input d-flex">
-                      <input type="number" id="area-code" name="area-code" maxlength="3" class="form-control" oninput="moveToNext(this, 'number')" placeholder="XXX">
+                      <input type="number" readonly id="area-code" name="area-code" class="form-control" placeholder="XXX">
                       <input type="number" id="number" name="number" maxlength="7" class="form-control" placeholder="XXXXXXX">
                     </div>
-                    
                   </div>
                   <span class="error" id="tellError"></span>
                 </div>
